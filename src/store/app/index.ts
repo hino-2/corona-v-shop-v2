@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { appInitialState, appName } from "./constants";
+import { appInitialState, appNamespace } from "./constants";
 import { reducers } from "./reducer";
 
 const appSlice = createSlice({
-	name: appName,
+	name: appNamespace,
 	initialState: appInitialState,
 	reducers,
 });
