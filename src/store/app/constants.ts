@@ -7,7 +7,6 @@ export const appInitialState: AppState = {
 	authorization: {
 		token: null,
 		tokenExpiredTime: null,
-		authorized: LoadingState.Idle,
-		login: null,
+		authorizationStatus: LoadingState.Idle,
 	},
 };

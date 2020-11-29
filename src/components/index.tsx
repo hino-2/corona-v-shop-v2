@@ -1,25 +1,20 @@
-import styled from "styled-components";
 import React from "react";
 import Header from "./header";
-import { GlobalStyle } from "../ui/global-style";
+import { Container } from "../ui/styled";
+import { Route, Switch } from "react-router-dom";
+import appRoutes from "../store/app/navigation";
+import LK from "./lk";
 
-const Container = styled.div({
-	display: "flex",
-	flexDirection: "column",
-	minWidth: "100vw",
-	minHeight: "100vh",
-	padding: "0 10%",
-});
+const routes = [
+	<Route key={appRoutes.home} path={appRoutes.home} exact component={() => <></>} />,
+	<Route key={appRoutes.lk} path={appRoutes.lk} exact component={LK} />,
+];
 
-const App = () => {
-	return (
-		<>
-			<GlobalStyle />
-			<Container>
-				<Header />
-			</Container>
-		</>
-	);
-};
+const App = () => (
+	<Container>
+		<Header />
+		<Switch>{routes}</Switch>
+	</Container>
+);
 
 export default App;

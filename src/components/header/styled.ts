@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import styled from "styled-components";
-import theme from "../../ui/theme";
+import { theme } from "../../ui/theme";
 
 export const HeaderContainer = styled.div({
 	display: "grid",

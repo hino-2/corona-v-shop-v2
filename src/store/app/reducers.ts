@@ -5,7 +5,7 @@ import { AppState } from "./types";
 type ReducerFunction<T = null> = CaseReducer<AppState, PayloadAction<T>>;
 
 const login: ReducerFunction<{ login: string; password: string }> = (state, { payload }) => {
-	state.authorization.authorized = LoadingState.Loading;
+	state.authorization.authorizationStatus = LoadingState.Loading;
 };
 
 export const reducers = {

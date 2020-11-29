@@ -2,10 +2,9 @@ import { LoadingState } from "../types";
 
 type AppState = {
 	authorization: {
-		authorized: LoadingState;
+		authorizationStatus: LoadingState;
 		token: string;
 		tokenExpiredTime: string;
-		login: string;
 	};
 };
 

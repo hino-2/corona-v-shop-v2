@@ -1,11 +1,14 @@
-type LK = {
+type LKState = {
 	userInfo: User;
 };
 
 type User = {
-	id: string;
-	name: string;
+	login: string;
 	email: string;
+	balance: number;
+	firstName?: string;
+	secondName?: string;
+	_id?: string;
 };
 
-export type { LK, User };
+export type { LKState, User };

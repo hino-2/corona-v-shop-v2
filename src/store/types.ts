@@ -1,12 +1,12 @@
 import { AppState } from "./app/types";
 import { CartState } from "./cart/types";
-import { LK } from "./lk/types";
+import { LKState } from "./lk/types";
 import { ProductListState } from "./product-list/types";
 
 type ApplicationState = {
 	app: AppState;
 	cart: CartState;
-	lk: LK;
+	lk: LKState;
 	productList: ProductListState;
 };
 
