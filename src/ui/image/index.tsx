@@ -7,9 +7,10 @@ type ImageProps = {
 	src: string;
 	width: number;
 	height: number;
+	onClick: (event: Event) => void;
 };
 
-const Image = ({ src, width, height, ...muiImageProps }: ImageProps & MuiImageProps) => (
+const Image = ({ src, width, height, onClick, ...muiImageProps }: ImageProps & MuiImageProps) => (
 	<MuiImage
 		src={src}
 		style={{
@@ -17,9 +18,11 @@ const Image = ({ src, width, height, ...muiImageProps }: ImageProps & MuiImagePr
 			height,
 			justifySelf: "center",
 			padding: 0,
+			cursor: onClick ? "pointer" : undefined,
 		}}
 		imageStyle={{ width, height }}
 		color={theme.primaryColors.transparent}
+		onClick={onClick}
 		{...muiImageProps}
 	/>
 );

@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import styled from "styled-components";
 import { theme } from "../../ui/theme";
 
@@ -21,4 +21,9 @@ export const Title = styled(Typography)`
 
 export const Subtitle = styled(Typography)`
 	color: #fff;
+`;
+
+export const LoginButton = styled(Button)`
+	background-color: ${theme.primaryColors.orange} !important;
+	min-width: 80px !important;
 `;
